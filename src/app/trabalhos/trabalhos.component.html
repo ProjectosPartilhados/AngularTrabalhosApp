@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-between">
+    <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="getTrabalhos() ">Novo Trabalho</button>
+    <button class="btn btn-info"  (click)="getTrabalhos() ">Listar Trabalhos</button>
+    <app-novo-trabalho class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></app-novo-trabalho>
+</div>
+<hr>
+
+
+<app-trabalho *ngFor="let trabalho of trabalhos" [trabalho]="trabalho">
+
+</app-trabalho>

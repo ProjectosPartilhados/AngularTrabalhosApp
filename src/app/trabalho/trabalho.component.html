@@ -1,0 +1,17 @@
+<div class="card mt-5" *ngIf="mostrar">
+    <div class="card-header">
+        {{trabalho.titulo}}
+    </div>
+    <div class="card-block">
+        <blockquote class="card-blockquote">
+            <p>{{trabalho.resumo}}</p>
+            <footer>{{trabalho.referencias}}</footer>
+        </blockquote>
+    </div>
+
+    <div class="d-flex flex-row-reverse">
+        <button class="btn btn-danger" (click)="onRemove()">Remover</button>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalEdit">Editar</button>
+        <app-edit-trabalho class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" [trabalho]="trabalho"></app-edit-trabalho>
+    </div>
+</div>
