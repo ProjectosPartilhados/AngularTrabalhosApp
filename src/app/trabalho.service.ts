@@ -14,7 +14,8 @@ export class TrabalhoService {
 
 
     getTrabalhos(): Observable<any>{
-       return this.http.get('http://127.0.0.1:8000/api/trabalhos');
+
+       return this.http.get('http://127.0.0.1:8000/api/trabalhos?token='+localStorage.getItem('token'));
 
     }
 

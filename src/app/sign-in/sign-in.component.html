@@ -1,0 +1,16 @@
+
+<div class="col-md-9">
+
+  <div class="account-wall">
+    <h4>Criar conta de Docente</h4>
+    <form class="form-signin" (onsubmit)="onSignIn(f)" #f="ngForm">
+      <h3 class="text-center">Criar conta</h3>
+      <input type="email" class="form-control" placeholder="Email" required autofocus name="email" id="email" ngModel>
+      <input type="password" class="form-control" placeholder="Password" required name="password" id="password" ngModel>
+      <input class="btn btn-lg ml-auto mr-auto btn-primary btn-block" type="submit" [disabled]="!f.valid" value="Sign Up" (click)="onSignIn(f)" >
+
+
+    </form>
+  </div>
+  <a href="#" [routerLink]="['/signup']" class="text-center new-account">Ainda nao tenho uma conta</a>
+</div>
