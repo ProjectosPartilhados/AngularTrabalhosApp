@@ -10,6 +10,9 @@ import {routing} from './app.routing';
 import {TrabalhoService} from './trabalho.service';
 import {HttpClientModule} from '@angular/common/http';
 import { EditTrabalhoComponent } from './edit-trabalho/edit-trabalho.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import {AuthServiceService} from "./auth-service.service";
 
 @NgModule({
     declarations: [
@@ -18,6 +21,8 @@ import { EditTrabalhoComponent } from './edit-trabalho/edit-trabalho.component';
         TrabalhosComponent,
         NovoTrabalhoComponent,
         EditTrabalhoComponent,
+        SignInComponent,
+        SignUpComponent,
     ],
     imports: [
         BrowserModule,
@@ -25,7 +30,7 @@ import { EditTrabalhoComponent } from './edit-trabalho/edit-trabalho.component';
         routing,
         HttpClientModule,
     ],
-    providers: [TrabalhoService],
+    providers: [TrabalhoService, AuthServiceService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
