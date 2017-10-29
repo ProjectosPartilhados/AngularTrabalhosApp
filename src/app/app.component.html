@@ -1,7 +1,14 @@
+
+<div class="btn-group">
+    <a href="#" class="mr-5" [routerLink]="['/']">Trabalhos</a>
+    <a href="#" class="mr-5" [routerLink]="['/signin']">Login</a>
+    <a href="#" class="mr-5" [routerLink]="['/signup']">Criar conta</a>
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col-md-6 ml-auto mr-auto mt-5">
-            <app-trabalhos></app-trabalhos>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>
